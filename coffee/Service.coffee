@@ -12,7 +12,7 @@ class OAuth2ClientService
       type: params.type
       profile: params.profile
 
-    @clientRepository.store client, (error, client) ->
+    @clientRepository.store client.id, client, (error, client) ->
       return callback error if error?
       return callback null, client
 
@@ -27,7 +27,7 @@ class OAuth2ClientService
     client = repository.find params.clientId, (error, client) ->
         return callback error if error?
         client.authorizeGrantType params.grantType
-        repository.store client, (error, client) ->
+        repository.store client.id, client, (error, client) ->
           return callback error if error?
           return callback null, client
 

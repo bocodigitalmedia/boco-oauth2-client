@@ -29,9 +29,8 @@ The client service needs a simple repository for storing and retrieving clients.
         object = @collection[id]
         return callback null, object
 
-      store: (object, callback) ->
-        object.id ?= require('uuid').v4()
-        @collection[object.id] = object
+      store: (id, object, callback) ->
+        @collection[id] = object
         return callback null, object
 
 Now we can assign it to the configuration object.
