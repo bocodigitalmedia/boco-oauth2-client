@@ -1,6 +1,6 @@
 {
   "name": "boco-oauth2-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "OAuth2 Client Service",
   "main": "./lib/index.js",
   "scripts": {
