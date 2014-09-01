@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Abstract.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "coffee/ClientRepository/Abstract.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,kBAAA;;CAAA,CAAM;CACJ;;CAAA,CAAM,CAAA,CAAN,IAAM,CAAC;CACL,IAAM,OAAA,KAAA;CADR,IAAM;;CAAN,CAEO,CAAA,EAAP,CAAO,EAAA,CAAC;CACN,IAAM,OAAA,KAAA;CAHR,IAEO;;CAFP;;CADF;;CAAA,CAMA,CAAiB,GAAX,CAAN,iBANA;CAAA"
+}

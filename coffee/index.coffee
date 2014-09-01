@@ -1,4 +1,6 @@
-Service = require './Service'
+exports.ClientRepository = require './ClientRepository'
+exports.Client = require './Client'
+exports.Service = require './Service'
 
 exports.createService = (config) ->
-  new Service config
+  new exports.Service config

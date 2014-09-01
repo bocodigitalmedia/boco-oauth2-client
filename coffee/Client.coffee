@@ -4,17 +4,19 @@ class OAuth2Client
     @name = props.name
     @type = props.type
     @profile = props.profile
-    @grantTypes = props.grantTypes
+    @authorizedGrantTypes = props.authorizedGrantTypes
     @setDefaults()
 
   setDefaults: ->
-    @grantTypes ?= []
+    @authorizedGrantTypes ?= []
 
   isGrantTypeAuthorized: (grantType) ->
-    @grantTypes.indexOf(grantType) isnt -1
+    @authorizedGrantTypes.indexOf(grantType) isnt -1
 
   authorizeGrantType: (grantType) ->
-    @grantTypes.push grantType unless @isGrantTypeAuthorized grantType
-    return undefined
+    return this if @isGrantTypeAuthorized grantType
+    @authorizedGrantTypes.push grantType
+    return this
+
 
 module.exports = OAuth2Client

@@ -20,22 +20,11 @@ The following code supports the async steps that can be run at the end of this R
 
 The client service needs a simple repository for storing and retrieving clients. We can mock one out using a 'MemoryRepository' that responds to the same interface.
 
-    class MemoryRepository
-
-      constructor: ->
-        @collection = {}
-
-      find: (id, callback) ->
-        object = @collection[id]
-        return callback null, object
-
-      store: (id, object, callback) ->
-        @collection[id] = object
-        return callback null, object
+    clientRepository = new BocoOAuth2Client.ClientRepository.Memory()
 
 Now we can assign it to the configuration object.
 
-    config.clientRepository = new MemoryRepository()
+    config.clientRepository = clientRepository
 
 ## Creating a service
 
